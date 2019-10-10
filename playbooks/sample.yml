@@ -1,0 +1,11 @@
+---
+- name: Sample Playbook
+  hosts: tag_name_demo
+  gather_facts: false
+  become_user: root
+  become: yes
+
+  tasks:
+
+    - name: Create temp folder
+      file: path=/mnt/temp/ state=directory mode=0755
